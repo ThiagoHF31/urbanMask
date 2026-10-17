@@ -17,4 +17,4 @@ __pycache__/
 .DS_Store
 .pytest_cache/
 
-!data/GYN-OBV_geometria.gpkg
+!data/apms.gpkg

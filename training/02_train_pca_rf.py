@@ -1,5 +1,5 @@
 # SPDX-License-Identifier: Apache-2.0
-# Copyright 2026 The UrbanMask authors
+# Copyright 2026 Centro de Excelência em Inteligência Artificial (CEIA), Universidade Federal de Goiás
 """Passo 2 do treino: consolida os CSVs do passo 1, treina StandardScaler -> PCA(95%) -> RandomForest(100, prof. 12)
 e escolhe o limiar de decisão que maximiza o F1 (média de 5 partições). Salva pipeline_final_cv.joblib e best_threshold_cv.pkl.
 Portado do notebook modeloFinal.ipynb.

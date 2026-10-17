@@ -1,5 +1,5 @@
 # SPDX-License-Identifier: Apache-2.0
-# Copyright 2026 The UrbanMask authors
+# Copyright 2026 Centro de Excelência em Inteligência Artificial (CEIA), Universidade Federal de Goiás
 """Passo 1 do treino: extrai, para cada polígono e cada ano, os 14 índices Sentinel-2 e o rótulo do Google Open Buildings
 Temporal (presença >= 0,56 e altura >= 2 m), um registro por pixel de 10 m, salvando CSVs de 100 polígonos.
 Portado do notebook script_colab.ipynb (Google Colab) para linha de comando.

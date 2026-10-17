@@ -3,7 +3,13 @@ message: "If you use UrbanMask, please cite it as below."
 title: "UrbanMask: a Sentinel-2 tool for fortnightly monitoring of new constructions in municipal public areas"
 type: software
 authors:
-  - name: "The UrbanMask authors"
+  - family-names: Honorato
+    given-names: Thiago
+  - family-names: Teixeira
+    given-names: Lana
+  - family-names: Pascoal
+    given-names: Luiz Mário
+repository-code: "https://github.com/ThiagoHF31/urbanMask"
 license: Apache-2.0
 version: 1.0.0
 date-released: "2026-10-18"

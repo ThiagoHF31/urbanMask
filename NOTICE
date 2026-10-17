@@ -1,5 +1,7 @@
 UrbanMask
-Copyright 2026 The UrbanMask authors.
+Copyright 2026 Centro de Excelência em Inteligência Artificial (CEIA), Instituto de Informática,
+Universidade Federal de Goiás (UFG), developed within the project "Inteligência Artificial Aplicada para
+promover uma Gestão eficiente do Dinamismo do Município de Goiânia" (SEFAZ and SEPLAN, Prefeitura de Goiânia).
 
 This product includes a trained model (model/pipeline_final_cv.joblib) whose training labels were derived from
 the Google Open Buildings Temporal dataset (GOOGLE/Research/open-buildings-temporal/v1), licensed under

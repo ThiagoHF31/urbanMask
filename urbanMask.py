@@ -1,5 +1,5 @@
 # SPDX-License-Identifier: Apache-2.0
-# Copyright 2026 The UrbanMask authors
+# Copyright 2026 Centro de Excelência em Inteligência Artificial (CEIA), Universidade Federal de Goiás
 # Licensed under the Apache License, Version 2.0 — see the LICENSE file in the repository root.
 """
 Urban Mask Detection Pipeline for Kubeflow
@@ -974,7 +974,7 @@ def run_urban_detection(
     run_id = f"urban_detection_{datetime.now().strftime('%Y%m%d_%H%M%S')}_{uuid.uuid4().hex[:8]}"
 
     logger.info("=" * 70)
-    logger.info("URBAN MASK DETECTION (Dual Model: Heurístico + PCA/RF)")
+    logger.info("URBAN MASK DETECTION — CEIA (Dual Model: Heurístico + PCA/RF)")
     logger.info("=" * 70)
     logger.info(f"Run ID              : {run_id}")
     logger.info(f"Intervalo execução  : {EXECUTION_INTERVAL_DAYS} dias")
@@ -1157,7 +1157,7 @@ def print_instructions():
     """Imprime instruções de uso."""
     print(f"""
 {'=' * 70}
-URBAN MASK DETECTION (Dual Model)
+URBAN MASK DETECTION — CEIA/UFG (Dual Model)
 {'=' * 70}
 
 USO VIA LINHA DE COMANDO:
@@ -1201,7 +1201,7 @@ if __name__ == "__main__":
     import argparse
 
     parser = argparse.ArgumentParser(
-        description='Urban Mask Detection Pipeline',
+        description='Urban Mask Detection Pipeline — CEIA/UFG',
         formatter_class=argparse.RawDescriptionHelpFormatter,
     )
     parser.add_argument('--gpkg',       type=str, default=None,

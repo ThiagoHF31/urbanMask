@@ -1,5 +1,7 @@
 # UrbanMask
 
+Desenvolvido pelo CEIA/UFG no projeto *Inteligência Artificial Aplicada para promover uma Gestão eficiente do Dinamismo do Município de Goiânia* (SEFAZ e SEPLAN, Prefeitura de Goiânia), com os resultados exibidos na plataforma ScanUrb Gyn.
+
 Pipeline em lote para detecção e monitoramento de novas construções em áreas públicas e lotes vagos a partir de imagens Sentinel-2, com dupla classificação: uma regra espectral (heurística) e um modelo de aprendizado de máquina (PCA + Random Forest). Pensado para execução quinzenal em Kubernetes.
 
 > **English summary.** UrbanMask is a batch pipeline that reprocesses Sentinel-2 imagery every 15 days over a set of polygons, flags new constructions at 10 m pixel level with two classifiers (a four-index threshold rule and PCA + Random Forest), keeps the cadastral key of each pixel end to end, and stores one PostgreSQL row per pixel and date. Code: Apache-2.0. The documentation below is in Portuguese; see also `docs/`.
@@ -53,7 +55,7 @@ PostgreSQL (pixel + pixel_urban)
 │   ├── database_schema.md          # esquema das tabelas
 │   └── limitations.md              # limitações conhecidas
 ├── data/
-│   └── GYN-OBV_geometria.gpkg      # pontos de referência (somente geometria)
+│   └── apms.gpkg                   # APMs de exemplo, sem identificadores de pessoas
 ├── tests/                          # testes automatizados (pytest)
 ├── requirements.txt
 ├── CITATION.cff
@@ -246,7 +248,7 @@ kubectl logs -n <NAMESPACE> -l app=urbanmask --follow
 
 ## O que não está neste repositório
 
-Os dados de entrada do projeto original, que contêm dados pessoais. O formato esperado da sua própria camada está em [`docs/input_format.md`](docs/input_format.md).
+Os identificadores que ligam um polígono a uma pessoa (nome do proprietário, inscrição cadastral e campos derivados) foram removidos do dado de exemplo. O formato esperado da sua própria camada está em [`docs/input_format.md`](docs/input_format.md).
 
 ## Limitações
 
@@ -255,3 +257,7 @@ Veja [`docs/limitations.md`](docs/limitations.md). Em resumo: o Sentinel-2 tem 1
 ## Licença, citação e dados de terceiros
 
 Código sob **Apache License 2.0** (`LICENSE`). Os rótulos de treino derivam do Google Open Buildings Temporal (CC BY 4.0); veja `NOTICE`. Para citar, use `CITATION.cff`.
+
+---
+
+**Instituição**: CEIA, Universidade Federal de Goiás (UFG)

@@ -1,3 +1,3 @@
-# GYN-OBV — somente geometria
+# Dado de exemplo: APMs
 
-`GYN-OBV_geometria.gpkg` (camada `gyn_obv`, EPSG:4326): 55.590 pontos (centro de cada edificação do Open Buildings v3 inspecionada em Goiânia). **Nenhum atributo**: sem classe, ano, área, bairro, plus code, alvará, inscrição, proprietário ou observações.
+`apms.gpkg` (camada `apms`): áreas públicas municipais usadas pelo UrbanMask, com localização, endereço, bairro, uso e áreas. Foram removidos apenas os campos que identificam pessoas: nome do proprietário, inscrição cadastral (`ci`, `nr_iptu`, `nr_refiptu`) e o dígito verificador (`dg_ferific`).
