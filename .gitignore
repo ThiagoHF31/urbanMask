@@ -1,0 +1,20 @@
+# dados e segredos nunca entram no repositório
+*.gpkg
+*.gpkg-*
+*.shp
+*.parquet
+*.csv
+.env
+*.env
+*credentials*.json
+gcp-credentials.json
+# execução local
+checkpoints/
+sentinel_pixel_grid.parquet
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.DS_Store
+.pytest_cache/
+
+!data/GYN-OBV_geometria.gpkg

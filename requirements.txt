@@ -1,0 +1,12 @@
+# Python 3.11. O modelo em model/ foi serializado com scikit-learn 1.6.1 (funciona na 1.8 com um aviso de versão)
+earthengine-api
+geemap
+geopandas
+shapely
+sqlalchemy
+psycopg2-binary
+pandas
+numpy
+scikit-learn==1.6.1
+joblib
+pyarrow

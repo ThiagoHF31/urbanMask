@@ -1,0 +1,31 @@
+# Exemplo de agendamento quinzenal em Kubernetes (ajuste namespace, imagem, volumes e segredos)
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: urban-detection
+  namespace: <NAMESPACE>
+spec:
+  schedule: "0 2 */15 * *"          # dias 1, 16 e 31 de cada mês
+  concurrencyPolicy: Forbid
+  successfulJobsHistoryLimit: 3
+  failedJobsHistoryLimit: 3
+  jobTemplate:
+    spec:
+      activeDeadlineSeconds: 86400
+      template:
+        spec:
+          restartPolicy: OnFailure
+          containers:
+          - name: urban-detection
+            image: <IMAGEM>
+            args: ["--gpkg", "/data/apms.gpkg", "--periodo", "QUINZENAL"]
+            env:
+            - {name: GEE_SERVICE_ACCOUNT, valueFrom: {secretKeyRef: {name: gee-service-account, key: GEE_SERVICE_ACCOUNT}}}
+            - {name: DB_HOST,     valueFrom: {secretKeyRef: {name: db-credentials, key: DB_HOST}}}
+            - {name: DB_PORT,     valueFrom: {secretKeyRef: {name: db-credentials, key: DB_PORT}}}
+            - {name: DB_USER,     valueFrom: {secretKeyRef: {name: db-credentials, key: DB_USER}}}
+            - {name: DB_PASSWORD, valueFrom: {secretKeyRef: {name: db-credentials, key: DB_PASSWORD}}}
+            - {name: DB_NAME,     valueFrom: {secretKeyRef: {name: db-credentials, key: DB_NAME}}}
+            resources:
+              requests: {memory: "16Gi", cpu: "4"}
+              limits:   {memory: "24Gi", cpu: "4"}

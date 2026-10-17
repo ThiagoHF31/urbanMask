@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use UrbanMask, please cite it as below."
+title: "UrbanMask: a Sentinel-2 tool for fortnightly monitoring of new constructions in municipal public areas"
+type: software
+authors:
+  - name: "The UrbanMask authors"
+license: Apache-2.0
+version: 1.0.0
+date-released: "2026-10-18"
+# doi: "[[PENDENTE: DOI do Zenodo]]"

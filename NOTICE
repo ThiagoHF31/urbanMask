@@ -1,0 +1,9 @@
+UrbanMask
+Copyright 2026 The UrbanMask authors.
+
+This product includes a trained model (model/pipeline_final_cv.joblib) whose training labels were derived from
+the Google Open Buildings Temporal dataset (GOOGLE/Research/open-buildings-temporal/v1), licensed under
+CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/). Attribution: Sirko et al. (2023), "High-resolution
+building and road detection from Sentinel-2", arXiv:2310.11622.
+
+Imagery: Copernicus Sentinel-2 data, accessed through Google Earth Engine (Gorelick et al., 2017).
