@@ -66,7 +66,7 @@ Os dados de entrada. O GeoPackage de entrada do projeto original contém dados p
 
 ## Treino e avaliação
 
-`training/` traz os dois passos usados para gerar o modelo (extração dos pixels no Earth Engine e treino). Como avaliar de forma que respeite polígonos, anos e blocos geográficos: [`docs/evaluation.md`](docs/evaluation.md). Testes: `pytest`.
+`training/` traz os dois passos usados para gerar o modelo (extração dos pixels no Earth Engine e treino). A divisão do treino é aleatória por pixel. Testes: `pytest`.
 
 ## Limitações
 

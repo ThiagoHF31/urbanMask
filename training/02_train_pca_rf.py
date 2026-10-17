@@ -5,8 +5,7 @@ e escolhe o limiar de decisão que maximiza o F1 (média de 5 partições). Salv
 Portado do notebook modeloFinal.ipynb.
 
 Uso:  python training/02_train_pca_rf.py --input ./batches_pixel --out ./model
-Atenção: divisão aleatória por pixel (como no original). Para uma avaliação que respeite polígonos, anos ou blocos
-geográficos, veja docs/evaluation.md.
+Atenção: divisão aleatória por pixel (como no original).
 """
 import argparse
 ap = argparse.ArgumentParser()
